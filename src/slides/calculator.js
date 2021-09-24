@@ -63,15 +63,14 @@ export default function calculator() {
                     <img src={calcSnippet}/>
                 </div>
                 <div className="result">
-                    <form className="form">
-                        <p>Try it out:</p>
-                            <input type="text" name="converterCtoF" id="userInput"/>
-                            <input type="button" value="Submit" id = "submit"
-                            onClick = {evaluate}/>
-                    </form>
-                    <div className="userResult">
-                    </div>
-                </div>               
+                  <form className="form">
+                    <p>Try it out:</p>
+                    <input type="text" name="converterCtoF" id="userInput"/>
+                    <input type="button" value="Submit" id = "submit" onClick = {evaluate}/>
+                  </form>
+                  <div className="userResult">
+                  </div>
+              </div>               
             </Holder>
         </PageContainer>
     );
@@ -114,11 +113,12 @@ const Holder = styled.div`
             #submit{
                 width: 5rem;
                 background-color: black;
-                margin: 0.5rem 0;
+                margin: 1rem 0 0.5rem 0;
                 border-radius: 0.2rem;
                 border-color: white;
                 border-style: solid;
                 color: white;
+                font-size: 1.1rem;
             }
 
             #submit:hover{
@@ -130,6 +130,8 @@ const Holder = styled.div`
 
             #userInput {
               text-align: center;
+              width: 12rem;
+              font-size: 1.2rem;
             }
         }
 

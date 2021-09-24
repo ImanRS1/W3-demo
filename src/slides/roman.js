@@ -112,11 +112,12 @@ align-items: center;
         #romanSubmit{
             width: 5rem;
             background-color: black;
-            margin: 0.5rem 0;
+            margin: 1rem 0 0.5rem 0;
             border-radius: 0.2rem;
             border-color: white;
             border-style: solid;
             color: white;
+            font-size: 1.1rem;
         }
 
         #romanSubmit:hover{
@@ -128,6 +129,8 @@ align-items: center;
 
         #romanInput {
             text-align: center;
+            width: 12rem;
+            font-size: 1.2rem;
         }
     }
   

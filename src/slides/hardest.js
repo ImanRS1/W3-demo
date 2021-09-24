@@ -42,13 +42,16 @@ const PageContainer = styled.div`
         justify-content: space-evenly;
         .partInfo{
             width: 40vw;
-            h1{
-                margin-top: 2rem;
-            }
             p{
-                margin-top: 3rem;
+                margin-top: 2rem;
                 font-size: 2vw;
                 text-align: center;
+            }
+            img {
+                width: 100%;
+                background-color: white;
+                height: 65vh;
+                object-fit: cover;
             }
         }
 
@@ -59,8 +62,5 @@ const PageContainer = styled.div`
         font-size: 5vw;
         text-align: center;
         margin: 0;
-    }
-    img {
-        background-color: white;
     }
 `;
