@@ -33,20 +33,20 @@ export default function fizzbuzz() {
         for (let i = 0; i < arr.length; i++) {
             switch (0) {
               case arr[i] % 15:
-                resultArr.push('FizzBuzz');
+                resultArr.push(' FizzBuzz');
                 break;
               case arr[i] % 3:
-                resultArr.push('Fizz');
+                resultArr.push(' Fizz');
                 break;
               case arr[i] % 5:
-                resultArr.push('Buzz');
+                resultArr.push(' Buzz');
                 break;
               default:
-                resultArr.push(arr[i]);
+                resultArr.push(` ${arr[i]}`);
                 break;
             }
         }
-        resultContainer.innerHTML = `Your result is: ${resultArr}`;
+        resultContainer.innerHTML = `[${resultArr}]`;
       };
     return (
         <PageContainer>
@@ -58,14 +58,13 @@ export default function fizzbuzz() {
                     <img src={fizzSnippet}/>
                 </div>
                 <div className="result">
-                <form className="form">
+                  <form className="form">
                     <p>Try it out:</p>
-                        <input type="text" name="converterCtoF" id="fizzInput"/>
-                        <input type="button" value="Submit" id = "fizzSubmit"
-                            onClick = {fizz}/>
-                    </form>
-                    <div className="fizzResult">
-                    </div>
+                    <input type="text" name="converterCtoF" id="fizzInput"/>
+                    <input type="button" value="Submit" id = "fizzSubmit" onClick = {fizz}/>
+                  </form>
+                  <div className="fizzResult">
+                  </div>
                 </div>               
             </Holder>
         </PageContainer>
@@ -96,9 +95,9 @@ justify-content: space-evenly;
 align-items: center;
 
 .result{
-    height: 15rem;
+  height: 25rem;
     max-width: 20rem;
-
+    overflow: scroll;
     .form{
         display: flex;
         flex-direction: column;
@@ -131,6 +130,7 @@ align-items: center;
     .fizzResult{
         margin: 1rem 0;
         text-align: center;
+        overflow-wrap: break-word;
     }
 }
 `;

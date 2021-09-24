@@ -101,8 +101,9 @@ const Holder = styled.div`
     align-items: center;
 
     .result{
-        height: 15rem;
+        height: 25rem;
         max-width: 20rem;
+        overflow: scroll;
 
         .form{
             display: flex;
@@ -135,6 +136,7 @@ const Holder = styled.div`
         .userResult{
             margin: 1rem 0;
             text-align: center;
+            overflow-wrap: break-word;
         }
     }
 `;

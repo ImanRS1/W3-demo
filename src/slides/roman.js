@@ -99,8 +99,9 @@ justify-content: space-evenly;
 align-items: center;
 
 .result{
-    height: 40vh;
+    height: 25rem;
     max-width: 20rem;
+    overflow: scroll;
 
     .form{
         display: flex;
@@ -134,7 +135,7 @@ align-items: center;
     .romanResult{
         margin: 1rem 0;
         text-align: center;
-        max-width: 20rem;
+        overflow-wrap: break-word;
     }
 }
 `;
