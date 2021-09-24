@@ -5,11 +5,13 @@ import mobing from "../images/mobing.png";
 import ClickToScroll from "../components/clickToScrollDown";
 import ClickToScrollUp from "../components/clickToScrollUp";
 import { UseScroll } from "../components/UseScroll";
+import { scrollReveal } from "../animations";
+import { motion } from "framer-motion";
 
 export default function hardAndFun() {
     const [element, controls] = UseScroll();
     return (
-        <PageContainer>
+        <PageContainer variants={scrollReveal} ref={element} animate={controls}>
             <ClickToScrollUp page={3} ref={element} animate={controls} />
             <ClickToScroll page={5} ref={element} animate={controls} />
             <div className="infoContainer">
@@ -31,7 +33,7 @@ export default function hardAndFun() {
 }
 
 
-const PageContainer = styled.div`
+const PageContainer = styled(motion.div)`
     position: relative;
     background-color: black;
     height: 100vh;

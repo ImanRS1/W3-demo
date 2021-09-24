@@ -14,8 +14,6 @@ export default function intro() {
                 <p>[Loukas, Igor, Iman, Mariana]</p>
             </div>
             <ClickToScroll page={1} ref={element} animate={controls} />
-
-           
         </PageContainer>
     );
 }
@@ -24,7 +22,6 @@ const PageContainer = styled.div`
     height: 100vh;
     width: 100vw;
     position: relative;
-
     .logo {
         right: 0;
         bottom: 0;

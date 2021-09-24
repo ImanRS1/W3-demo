@@ -3,11 +3,13 @@ import styled from "styled-components";
 import mobPic from "../images/mobSters.png";
 import ClickToScrollUp from "../components/clickToScrollUp";
 import { UseScroll } from "../components/UseScroll";
+import { scrollReveal } from "../animations";
+import { motion } from "framer-motion";
 
 export default function conclusion() {
     const [element, controls] = UseScroll();
     return (
-        <PageContainer>
+    <PageContainer variants={scrollReveal} ref={element} animate={controls}>
         <ClickToScrollUp page={4} ref={element} animate={controls} />
         <img src={mobPic}/>
         <div className="logo">
@@ -17,11 +19,10 @@ export default function conclusion() {
     );
 }
 
-const PageContainer = styled.div`
+const PageContainer = styled(motion.div)`
     height: 100vh;
     width: 100vw;
     position: relative;
-
     .logo {
         right: 0;
         bottom: 0;
