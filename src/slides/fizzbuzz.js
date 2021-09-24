@@ -10,6 +10,14 @@ export default function fizzbuzz() {
     const fizz = () => {
         const arrLen = document.getElementById("fizzInput").value;
         const resultContainer = document.querySelector(".fizzResult");
+
+        if (isNaN(parseInt(arrLen), 10)) {
+          return resultContainer.innerHTML = 'Please provide a number.';
+        };
+
+        if (arrLen > 100 || arrLen <= 0) {
+          return resultContainer.innerHTML = 'Please provide numbers between 1 and 100.';
+        };
         
         const popArr = arrLen => {
             const myArr = [];
@@ -23,23 +31,7 @@ export default function fizzbuzz() {
 
         const resultArr = [];
         for (let i = 0; i < arr.length; i++) {
-          if (arr[i] > 100) {
-            resultArr.push('Please provide number below 100');
-          }
-      
-          if (arr[i] < 0) {
-            resultArr.push('Please provide positive number');
-          }
-      
-          if (typeof arr[i] !== 'number') {
-            resultArr.push('Please provide numbers');
-          }
-      
-          if (typeof arr[i] === 'number' && arr[i] >= 0 && arr[i] <= 100) {
             switch (0) {
-              case arr[i]:
-                resultArr.push('Please provide positive number');
-                break;
               case arr[i] % 15:
                 resultArr.push('FizzBuzz');
                 break;
@@ -53,10 +45,7 @@ export default function fizzbuzz() {
                 resultArr.push(arr[i]);
                 break;
             }
-          }
         }
-        console.log(resultArr);
-        console.log(arr);
         resultContainer.innerHTML = `Your result is: ${resultArr}`;
       };
     return (
