@@ -59,7 +59,6 @@ const ScrollButton = styled(motion.div)`
 
   &:hover {
     background-color: black;
-   // border: 0.2rem solid gray;
     color: gray;
   }
 `;
